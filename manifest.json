@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "covid-19",
+  "version": "0.2",
+  "description": "Folow covid-19 in vietnam and global.",
+  "author": "Quyen Nguyen",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "covid-19",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["alarms", "https://ncov.moh.gov.vn/*"],
+  "background": {
+    "scripts": ["fetch-covid.js"],
+    "persistent": false
+  },
+  "offline_enabled": true,
+  "content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"
+}
